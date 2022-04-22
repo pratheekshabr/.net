@@ -107,27 +107,34 @@ public class FactorialExample<br>
  *******************
  15.Write a C# program to check amstrong number.<br>
  *******************
- using System;<br>
-public class ArmstrongExample<br>
+ 
+using System;<br>
+
+namespace Exercises<br>
 {<br>
-    public static void Main(string[] args)<br>
-    {
-        int n, r, sum = 0, temp;<br>
-        Console.Write("Enter the Number= ");<br>
-        n = int.Parse(Console.ReadLine());<br>
-        temp = n;<br>
-        while (n > 0)<br>
+    public class armstrongexample<br>
+    {<br>
+        public static void Main(string[] args)<br>
         {<br>
-            r = n % 10;<br>
-            sum = sum + (r * r * r);<br>
-            n = n / 10;<br>
+            int  n, r, sum = 0, temp;<br>
+            Console.Write("\n Enter the number:");<br>
+            n = int.Parse(Console.ReadLine());<br>
+            temp = n;<br>
+            while(n>0)<br>
+            {<br>
+                r = n % 10;<br>
+                sum = sum + (r * r * r);<br>
+                n = n / 10;<br>
+            }<br>
+            if (temp == sum)<br>
+                Console.Write("\n The number is Armstrong number\n");<br>
+            else<br>
+                Console.Write("\n The number is not Armstrong number\n");<br>
         }<br>
-        if (temp == sum)<br>
-            Console.Write("Armstrong Number.");<br>
-        else<br>
-            Console.Write("Not Armstrong Number.");<br>
     }<br>
 }<br>
+
+<br>
  Output:<br>
  **********<br>
  ![Screenshot (53)](https://user-images.githubusercontent.com/97940277/156501614-412927f2-e375-416d-b9e2-97f49d9e266a.png)<br>
